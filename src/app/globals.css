@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f4ef;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --muted: #475569;
+  --muted-foreground: #64748b;
+  --primary: #0f766e;
+  --primary-foreground: #f8fafc;
+  --accent: #f2c94c;
+  --border: #e2e8f0;
+  --ring: rgba(15, 118, 110, 0.35);
+  --font-sans: var(--font-sora);
+  --font-mono: var(--font-space-mono);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(242, 201, 76, 0.25), transparent 45%),
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.18), transparent 40%),
+    #f6f4ef;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.2);
+}
+
+.bg-sand {
+  background-color: #f6f4ef;
+}
+
+.app-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.6));
+  backdrop-filter: blur(18px);
+}
+
+.card-surface {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.input-surface {
+  background: #fffdfa;
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.grid-line {
+  background-image: linear-gradient(to bottom, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+  background-size: 100% 48px;
+}
